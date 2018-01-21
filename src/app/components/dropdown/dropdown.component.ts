@@ -8,7 +8,7 @@ import { MovieService} from './../../services/movie.service';
 })
 export class DropdownComponent implements OnInit {
   items = [];
-  selectedItem = null;
+  selectedItem = {};
   isOpen = false;
 
   constructor(public movieService: MovieService) { }
@@ -34,7 +34,7 @@ export class DropdownComponent implements OnInit {
     }
   }
   clear() {
-    this.selectedItem = null;
+    this.selectedItem = {};
   }
 
 }
