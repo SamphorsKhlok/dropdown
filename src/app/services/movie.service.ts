@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class MovieService {
@@ -8,7 +8,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getMovie(){
+  getMovie() {
     return this.http.get(this.url);
   }
 
