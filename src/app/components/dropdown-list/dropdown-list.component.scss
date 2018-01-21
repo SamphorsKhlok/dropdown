@@ -1,0 +1,63 @@
+@import "./../../../styles";
+
+app-dropdown-list {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  color: $black;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 150px;
+  .title {
+    display: block;
+    width: 100%;
+    padding: $spacing/2;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 30px;
+    border: 1px solid lighten($black, 80%);
+    background: lighten($black, 90%);
+    border-radius: 5px;
+  }
+  .list {
+    max-height: 0;
+    overflow: hidden;
+    background: lighten($black, 90%);
+    transition: max-height .5s ease;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    max-height: 150px;
+    overflow: auto;
+
+    border-right: 1px solid lighten($black, 80%);
+    border-bottom: 1px solid lighten($black, 80%);
+    border-left: 1px solid lighten($black, 80%);
+    li {
+      text-transform: capitalize;
+      //padding: 7px 5px;
+      border-top: 1px solid lighten($black, 80%);
+      &:hover {
+        background: lighten($black, 85%);
+      }
+    }
+  }
+  .clear {
+    color: $gray;
+    text-align: right;
+    width: 100%;
+    display: block;
+  }
+  .icon {
+    color: $gray;
+    opacity: .5;
+    position: absolute;
+    right: 45px;
+    display: inline-block;
+  }
+}

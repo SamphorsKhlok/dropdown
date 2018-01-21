@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { MovieService} from './../../services/movie.service';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { MovieService} from '../../services/movie.service';
 
 @Component({
-  selector: 'app-dropdown',
-  templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.css']
+  selector: 'app-dropdown-list',
+  templateUrl: './dropdown-list.component.html',
+  styleUrls: ['./dropdown-list.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class DropdownComponent implements OnInit {
+export class DropdownListComponent implements OnInit {
   items = [];
   selectedItem = {};
   isOpen = false;
@@ -25,6 +26,7 @@ export class DropdownComponent implements OnInit {
   }
   update(item) {
     this.selectedItem = item;
+    this.toggle();
   }
   toggle() {
     if (this.isOpen) {

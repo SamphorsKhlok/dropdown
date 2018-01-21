@@ -1,0 +1,11 @@
+<div (click)="toggle()" class="title">
+  Movie: {{selectedItem['title']}}
+  <span *ngIf="!isOpen" class="icon">&#x25B2;</span>
+  <span *ngIf="isOpen" class="icon">&#x25BC;</span>
+</div>
+<div *ngIf="isOpen" class="list">
+  <li *ngFor="let item of items" (click)="update(item)">{{item.title}}</li>
+</div>
+<div *ngIf="selectedItem['title']">
+  <a (click)="clear()" class="clear">Clear</a>
+</div>

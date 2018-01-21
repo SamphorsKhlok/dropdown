@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { MovieService} from './services/movie.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DropdownListComponent } from './components/dropdown-list/dropdown-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DropdownComponent
+    DropdownListComponent,
   ],
   imports: [
     BrowserModule,
